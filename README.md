@@ -5,34 +5,32 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Text Similarity API
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+A text similarity API is a tool that allows developers to compare two or more text documents and determine how similar they are. The API takes in one or more input texts and returns a similarity score or a ranking of the texts based on their similarity.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Based on the representation, the API can then calculate a similarity score between two or more texts. This score can be a numerical value between 0 and 1, where 0 means the texts are completely dissimilar, and 1 means they are identical.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Applications of text similarity APIs include plagiarism detection, content recommendation, document clustering, search result ranking, and more.
 
-## Learn More
+### How to Use the Application
 
-To learn more about Next.js, take a look at the following resources:
+-   When you open up the application on your browser, you have to sign in with a Google account
+-   When you are successfully signed in, you will be redirected to the dashboard
+-   In the dashboard, you will be able to click a button to generate a unique API Key
+  ![Example image](./public/request_api_key.png)
+-   You can then go to Postman or any HTTP client of your choice and for the Authorisation option, you will select 'API Key' and in the Value textbox is where you will insert the API Key that was generated
+![Example image](./public/authorisation.png)
+-   Then in the body you can then include values for text1 and text2 which you will be using for the comparison
+![Example image](./public/body.png)
+-   After that you should get a successful response with the value for the similarity test
+-   After a successful run with the API, you can go back to the ``/dashboard`` page in the application to view a history of the requests you have made
+-   If you want to use the API in an application, you can view the ``/documentation`` page on the application for guidelines written in python and Node.Js
+![Example image](./public/Documentation.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+`` Please note that you can only make 5 requests per hour ``

@@ -16,10 +16,6 @@ export const metadata: Metadata = {
 export default function Home() {
 	return (
 		<div className="relative h-screen flex items-center justify-center overflow-x-hidden">
-			<Script
-				strategy="afterInteractive"
-				src="https://www.googletagmanager.com/gtm.js?id=GTM-WQXWZFD"
-			/>
 			<Script id="google-tag-manager" strategy="afterInteractive">
 				{`
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
